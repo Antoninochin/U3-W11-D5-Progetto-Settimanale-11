@@ -1,0 +1,41 @@
+<form  (ngSubmit)="addUser()" #f="ngForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" ngModel name="name" class="form-control" id="name"  minlength="5" required >
+    </div>
+    <div class="mb-3">
+      <label for="lastName" class="form-label">LastName</label>
+      <input type="text" ngModel name="lastName" class="form-control" id="lastName">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" ngModel name="email" class="form-control" id="email">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" ngModel name="password" class="form-control" id="password"  minlength="7" required>
+    </div>
+    <div class="mb-3">
+    <button type="submit"  class="btn btn-outline-primary">Register</button>
+    </div>
+  </form>
+
+  <p>{{this.myuser.name}}</p>
+
+  <table class="table table-striped" >
+    
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">LastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Password</th>
+      </tr>
+      <tbody> 
+      <tr>
+        <td>{{ this.myuser.name}}</td>
+        <td>{{ this.myuser.lastName }}</td>
+        <td>{{ this.myuser.email }}</td>
+        <td>{{ this.myuser.password }}</td>
+      </tr>
+    </tbody> 
+  </table>
